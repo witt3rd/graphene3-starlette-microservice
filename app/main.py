@@ -18,7 +18,7 @@ class Query(graphene.ObjectType):
     me = graphene.Field(User)
 
     def resolve_me(root, info):
-        return {"id": "john", "name": "John"}
+        return {"id": "john", "name": "Johnny"}
 
 
 class FileUploadMutation(graphene.Mutation):
