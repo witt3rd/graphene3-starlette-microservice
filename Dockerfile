@@ -2,7 +2,7 @@ FROM python:3.9.7-slim-buster
 
 RUN apt-get update && apt-get upgrade -y
 
-RUN pip3 install gunicorn uvloop httptools
+RUN pip3 install gunicorn uvicorn[standard] uvloop httptools
 
 COPY requirements.txt /app/requirements.txt
 RUN pip3 install -r /app/requirements.txt
